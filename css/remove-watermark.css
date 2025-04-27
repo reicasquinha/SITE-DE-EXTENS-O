@@ -1,0 +1,26 @@
+/* Estilos para remover a marca d'água do Manus */
+.manus-watermark {
+  display: none !important;
+}
+
+/* Esconde qualquer elemento com texto "Made with Manus" */
+a[href*="manus.ai"],
+a:contains("Made with Manus"),
+div:contains("Made with Manus"),
+span:contains("Made with Manus") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
+
+/* Esconde elementos específicos que podem conter a marca d'água */
+#manus-watermark,
+.manus-badge,
+.manus-branding {
+  display: none !important;
+}
